@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon y CSS -->
+  <link rel="icon" href="Imagenes/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="estilo.css">
+
+  <title>Forest Store · Contacto</title>
+
+  <style>
+    #contacto .contact-layout{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+      max-width: 980px;
+      margin: 0 auto 16px;
+    }
+
+    #contacto .info{
+      background: var(--surface, #fff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 8px 22px -18px rgba(0,0,0,.18);
+    }
+    #contacto .info h2{ margin-bottom: .25rem; }
+    #contacto .info p{ margin: .25rem 0; }
+
+    /* Formulario de contacto */
+    #contacto .form-modern{
+      background: var(--surface, #fff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 8px 22px -18px rgba(0,0,0,.18);
+      display: grid;
+      gap: 12px;
+    }
+
+    #contacto .form-modern .row-2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    #contacto .form-modern .field{ display: grid; gap: 6px; }
+    #contacto .form-modern label{
+      font-weight: 600;
+      color: var(--text, #222);
+    }
+    #contacto .form-modern input,
+    #contacto .form-modern textarea{
+      width: 100%;
+      font: inherit;
+      color: var(--text, #222);
+      background: #fff;
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 10px;
+      padding: 10px 12px;
+      outline: 0;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    #contacto .form-modern input:focus,
+    #contacto .form-modern textarea:focus{
+      border-color: var(--accent, #0ea5a1);
+      box-shadow: 0 0 0 3px rgba(14,165,161,.15);
+    }
+
+    #contacto .form-modern textarea{
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    #contacto .form-modern .actions{ margin-top: 4px; }
+    #contacto .form-modern button{
+      background: var(--accent, #0ea5a1);
+      color: #fff;
+      border: 0;
+      padding: 10px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: filter .15s ease, transform .08s ease;
+    }
+    #contacto .form-modern button:hover{ filter: brightness(.96); }
+    #contacto .form-modern button:active{ transform: translateY(1px); }
+
+    /* Foto de la tienda */
+    #contacto .store-photo{
+      max-width: 980px;
+      margin: 0 auto 16px;
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface, #fff);
+    }
+    #contacto .store-photo img{
+      width: 100%; height: auto;
+      aspect-ratio: 16/9; object-fit: cover; display: block;
+    }
+    #contacto .store-photo figcaption{
+      padding: 8px 10px; color: var(--muted, #6b7280); font-size: .9rem;
+    }
+
+    @media (max-width: 900px){
+      #contacto .contact-layout{ grid-template-columns: 1fr; }
+      #contacto .form-modern .row-2{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Menú con logo -->
+  <nav class="menu container">
+    <a href="forest.html" class="brand">
+      <img src="Imagenes/logo.png" alt="Logo Forest Store" class="logo">
+      <span>Forest Store</span>
+    </a>
+    <div class="links">
+      <a href="forest.html">Inicio</a>
+      <a href="colecciones.html">Colecciones</a>
+      <a href="guia-tallas.html">Guía de tallas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Sección de contacto -->
+  <section id="contacto" class="container">
+    <h1>Contacto</h1>
+
+    <div class="contact-layout">
+      <aside class="info">
+        <h2>Forest Store</h2>
+        <p><strong>Dirección:</strong> 15 Avenida 6-45, Zona 10, Plaza Vidú, Local #L-21 Segundo Nivel, San Miguel Petapa, Guatemala</p>
+        <br>
+        <p><strong>Teléfono:</strong> <a href="tel:24031199">24031199</a></p>
+        <br>
+        <p class="nota">Déjanos tu mensaje. Te responderemos lo antes posible.</p>
+      </aside>
+
+      <form id="contacto-form" class="form-modern" action="#" method="post">
+        <div class="row-2">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="field">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" placeholder="tunombre@correo.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="¿En qué podemos ayudarte?"></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Foto de la tienda -->
+    <figure class="store-photo">
+      <img src="Imagenes/tienda.png" alt="Forest Store en Plaza Vidú, San Miguel Petapa">
+      <figcaption>Visítanos en 15 Avenida 6-45, Zona 10, Plaza Vidú, Local #L-21 Segundo Nivel, San Miguel Petapa, Guatemala.</figcaption>
+    </figure>
+  </section>
+
+
+
+
+
+

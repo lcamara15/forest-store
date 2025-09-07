@@ -1,0 +1,80 @@
+/* estilo.css */
+
+/* ===== Paleta + fonts ===== */
+:root{
+  --font: 'Poppins', Arial, Helvetica, sans-serif;
+  --bg: #ffffff;
+  --text: #000000;          /* texto principal */
+  --muted: #000000;      /* texto secundario */
+  --surface: #ffffff;    /* fondos de menú/tarjetas/footer */
+  --border: #e5e7eb;     /* borde suave */
+  --accent: #dad263;     /* acento */
+  --hero: #cce2ba;       /* fondo del hero */
+}
+
+/* ===== Base  ===== */
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:var(--font); line-height:1.5;
+  background:var(--bg); color:var(--text);
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+h1,h2{margin:0 0 .5rem}
+p{margin:.5rem 0 1rem; color:var(--muted)}
+a{color:var(--text); text-decoration:none}
+img{max-width:100%; display:block}
+table{width:100%; border-collapse:collapse; background:var(--surface)}
+th,td{border:1px solid #e2e2e2; padding:.6rem; text-align:left}
+
+/* ===== Layout ===== */
+.container{width:95%; max-width:960px; margin:0 auto; padding:16px}
+
+/* --- Menú con logo --- */
+.menu{
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+}
+.menu.container{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px; flex-wrap:wrap; 
+}
+
+/* Marca (logo + nombre) */
+.brand{
+  display:flex; align-items:center; gap:10px;
+  font-weight:600; letter-spacing:.2px;
+}
+.brand .logo{height:28px; width:auto; border-radius:6px} 
+.brand span{color:var(--text)}
+
+/* Links del menú */
+.links{display:flex; gap:6px; flex-wrap:wrap}
+.links a{display:inline-block; padding:10px 12px; border-radius:6px}
+.links a:hover{background:#eef6f5} 
+
+/* Tarjetas */
+.card{background:var(--surface); border:1px solid #000000; border-radius:8px; padding:12px}
+.card img{border-radius:6px; margin-bottom:8px}
+.grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
+
+/* ===== Secciones ===== */
+#hero{background:var(--hero); border-bottom:1px solid #d6e4da}
+#colecciones .tag{
+  display:inline-block; background:#111; color:#fff;
+  padding:2px 8px; border-radius:999px; font-size:.78rem; margin-top:6px;
+}
+#tallas .nota{
+  background:#f1f0ff; border:1px solid #e2e0ff; border-radius:6px;
+  padding:.6rem; margin-top:.5rem;
+}
+
+/* ===== Footer ===== */
+.footer{background:var(--surface); border-top:1px solid var(--border)}
+.footer .container{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.footer small{color:#555}
+.footer strong{color:#111}
+
+
+
+
+
